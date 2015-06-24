@@ -96,13 +96,15 @@ int main(int argc, char* argv[]) {
    for (i = 0; i < count; i++) {
 	   if (events[i]->cmd == 9 && events[i]->db2 != 0) {
 	     for (int j = i; j < count; j++) {
-			if ((events[j]->cmd == 8 || events[j]->db2 == 0) && (events[j]->time - events[i]->time) < 0.0001
-				&& events[j]->db1 == events[i]->db1) {
-				unsigned char tmp = events[i]->db2;
+			if ((events[j]->cmd == 8 || events[j]->db2 == 0) && (events[j]->time - events[i]->time) < 0.0001) {
+				unsigned char tmp1 = events[i]->db1;
+				unsigned char tmp2 = events[i]->db2;
 				events[i]->cmd = events[j]->cmd;
+				events[i]->db1 = events[j]->db1;
 				events[i]->db2 = events[j]->db2;
 				events[j]->cmd = 0x09;
-				events[j]->db2 = tmp;
+				events[j]->db1 = tmp1;
+				events[j]->db2 = tmp2;
 				break;
 			}
 		 }

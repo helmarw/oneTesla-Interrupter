@@ -7,3 +7,8 @@ I compiled it on a mac by going into the improv library and doing the following:
 make library
 LANG=C  g++  -O3 -Iinclude -DOSXPC   -o omdconvert ../omdconvert.cpp -Llib -limprov  -framework CoreMIDI -framework CoreServices -framework AudioUnit -framework AudioToolbox && strip omdconvert
 
+
+David Kiliani: Compiled it on Debian Linux using
+make library
+cd ..
+LANG=C g++ -O3 -Iinclude -DOSXPC -o omdconvert omdconvert.cpp -Limprov/lib -limprov
