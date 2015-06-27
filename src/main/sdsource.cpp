@@ -190,6 +190,12 @@ void sdsource_run() {
       filepos = 0; kt = t;
       delay(300);
     }
+
+    if (key == btnRETURN) {
+      delay(150);
+      note_stop();
+      return;
+    }
   }
 }
 

@@ -38,6 +38,7 @@ unsigned int get_on_time(long freq) {
 unsigned char get_key()
 {
 #ifndef DEBUG
+ if (!digitalRead(BTN_UP) && !digitalRead(BTN_DN)) return btnRETURN;
  if (!digitalRead(BTN_UP)) return btnUP;
  if (!digitalRead(BTN_DN)) return btnDOWN;
  if (!digitalRead(BTN_OK)) return btnSELECT;

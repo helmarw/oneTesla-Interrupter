@@ -85,6 +85,8 @@ void loop() {
       }
       delay(300);
     }
+    displayMenu();
+    while (get_key() != btnNONE);
   }
 }
 
@@ -182,6 +184,10 @@ void fixedLoop() {
           note1->on_time = get_on_time(ffreq);
           setTimer1f(ffreq);;
         }
+      }
+      if (key == btnRETURN) {
+        note_stop();
+        return;
       }
     }
     delayMicroseconds(1000);

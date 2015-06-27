@@ -79,6 +79,7 @@ static unsigned char arrow[8] = {~0x0f, ~0x07, ~0x03, ~0x01, ~0x03, ~0x07, ~0x0f
 #define btnLEFT   3
 #define btnSELECT 4
 #define btnNONE   5
+#define btnRETURN 6
 
 #define MENU_SDCARD 0
 #define MENU_FIXED  1
