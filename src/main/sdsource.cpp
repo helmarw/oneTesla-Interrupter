@@ -27,7 +27,7 @@ void sdsource_init() {
 void sdsource_initcard() {
   lcd_printhome("Checking SD Card");
   if (!fs.begin(MMC_CS, SPI_FULL_SPEED)) {
-    if (fs.card()->errorCode()) { 
+    if (fs.card()->errorCode()) {
       // Can use sd.card()->errorData() to find out more information.
       // errorCode of 0x01; errorData of 0xFF is wiring error or no card.
       strcpy(sd->last_error, "No card found");
@@ -42,21 +42,21 @@ void sdsource_initcard() {
       return;
     }
     strcpy(sd->last_error, "Unknown error");
-    return;    
+    return;
   }
 
   lcd_printhome("Loading...");
 
-  while(sdsource_filenext(false)) {  
+  while(sdsource_filenext(false)) {
     sd->file_count++;
   }
   file.close();
   fs.vwd()->rewind();
-  
+
   if (sd->file_count == 0) {
     strcpy(sd->last_error, "No valid files");
   }
- 
+
   sd->valid = 1;
 }
 
@@ -94,7 +94,7 @@ unsigned char sdsource_fileprev(bool loadfile = false) {
         return 1;
       }
       file.close();
-    }    
+    }
   } while (index-- > 0);
   return 0;
 }
@@ -112,17 +112,17 @@ void sdsource_showfilename(int pos = 0) {
   if (fn_len < 0)
     fn_len = 0;
   else
-    start = (pos % (fn_len + 6)) - 3;  
-    
+    start = (pos % (fn_len + 6)) - 3;
+
   // Pause for 3 beats at the beginning and end of the scroll
   if (start < 0)
     start = 0;
   else if (start >= fn_len)
     start = fn_len;
-  
+
   lcd_printhome(&filename[start]);
   lcd_setcursor(0, 1);
-  
+
   unsigned int lsec = (int) (sd->len / 1000);
   lcd_print(lsec / 60);
   lcd_print(':');
@@ -142,27 +142,38 @@ void sdsource_loadfile() {
 
 void sdsource_run() {
   unsigned long kt = millis();
+  unsigned long old_key_t = millis();
   int filepos = 0;
-  
+
   sdsource_filenext(true);
   sdsource_showfilename(0);
-  
+
+  unsigned char old_key = btnNONE;
+  unsigned char key = btnNONE;
+
   for (;;) {
     unsigned long t = millis();
-    unsigned char key = get_key();
-    
-    if (t - kt > 600) {
+
+    if (t - old_key_t > 200) {
+      old_key = btnNONE;
+      old_key_t = t;
+    } else {
+      old_key = key;
+    }
+    key = get_key();
+
+    if (t - kt > 300) {
       sdsource_showfilename(filepos++);
       kt = t;
-    }      
-    
-    if (key == btnSELECT) {
+    }
+
+    if (old_key == btnNONE && key == btnSELECT) {
       delay(150);
       sdsource_playfile();
       delay(300);
     }
-    
-    if (key == btnDOWN) {
+
+    if (old_key == btnNONE && key == btnDOWN) {
       delay(150);
       if (!sdsource_filenext(true)) {
         file.close();
@@ -172,8 +183,8 @@ void sdsource_run() {
       filepos = 0; kt = t;
       delay(300);
     }
-    
-    if (key == btnUP) {
+
+    if (old_key == btnNONE && key == btnUP) {
       delay(150);
       sdsource_fileprev(true);
       filepos = 0; kt = t;
@@ -213,11 +224,11 @@ void sdsource_playfile() {
         note_stop();
         kt = t;
         return;
-      } 
+      }
       else if (key == btnUP) {
         incvol(&lcd);
         kt = t;
-      } 
+      }
       else if (key == btnDOWN) {
         decvol(&lcd);
         kt = t;
