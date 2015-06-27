@@ -54,7 +54,7 @@ void loop() {
   }
   if (key == btnUP) {
     if (menuindex == 0) {
-      menuindex = 3;
+      menuindex = 2;
     } else {
       menuindex--;
     }
@@ -90,7 +90,7 @@ void loop() {
 
 void displayMenu()
 {
-  if (menuindex == 0) {
+  if (menuindex == MENU_SDCARD) {
     lcd_printhome("SD Card");
     lcd_setcursor(0, 1);
     if (sd->valid) {          
@@ -99,7 +99,7 @@ void displayMenu()
     } else {
       lcd_print((char *)sd->last_error);
     }
-  } else if (menuindex == 1) {
+  } else if (menuindex == MENU_LIVE) {
     lcd_printhome("Live Mode");
   } else {
     lcd_printhome("Fixed Mode");
