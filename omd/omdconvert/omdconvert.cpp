@@ -13,7 +13,7 @@ using namespace std;
 #include <stdlib.h>
 #include <iostream>
 
-#define MAX_EVENTS 2000
+#define MAX_EVENTS 20000
 
 typedef unsigned char uchar;
 
