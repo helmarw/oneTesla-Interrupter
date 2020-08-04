@@ -191,7 +191,8 @@ void fixedLoop() {
       }
     }
     delayMicroseconds(1000);
-    elapsed += 1000;
+ //   elapsed += 1000;
+   elapsed += 500;  // buttoms react a littele less bouncy
   }
 }
 
