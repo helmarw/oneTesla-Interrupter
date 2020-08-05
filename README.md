@@ -7,7 +7,7 @@ Here the parts you will need (see folder pictures and manuals for more informati
  * Datalogger Shield: https://learn.adafruit.com/adafruit-data-logger-shield or cheap remake https://www.az-delivery.de/products/datenlogger-modul?_pos=1&_sid=d2708e960&_ss=r
  * LCD-Keypad Shield: https://wiki.dfrobot.com/LCD_KeyPad_Shield_For_Arduino_SKU__DFR0009 or cheap remake https://www.az-delivery.de/products/azdelivery-hd44780-1602-lcd-module-display-2x16-zeichen-fur-arduino-lcd1602-keypad
  * Quality: you get what you pay for and READ THE FUCKING MANUAL :D
- * Attention: LCD Shield (at least the ones i used) you need to trimm Pin 10, usually used for Backlight control but is needed for the SD card (PIN 10 for Chip selelect). Backlight is now always on, but usually you need this anyway <br> <img src="pictures/IMG_6047.JPG" height="200">
+ * Attention: LCD Shield (at least the ones i used) you need to trimm Pin 10, usually used for Backlight control but is needed for the SD card (PIN 10 for Chip select). Backlight is now always on, but usually you need this anyway <br> <img src="pictures/IMG_6047.JPG" height="200">
   * To use it at all you need to enable Debug mode go to constants.h and uncomment the line 11 //#define DEBUG (original firmare would need some minor tweaks, but nothing serious)
  * Attention: in Debug mode the original oneTesla-SD-Interrupter wont work!!!
  * some other parts:
@@ -30,6 +30,9 @@ waiting for a few parts to finish up the Live Mode
 
 <img src="pictures/IMG_6053.JPG" height="200"> <img src="pictures/IMG_6054.JPG" height="200"> <img src="pictures/IMG_6055.JPG" height="200"> 
 
+
+here some details how i wired the Optical Transmitter and the 100Ohm resistor<br>
+<img src="pictures/IMG_6049.JPG" height="200"> <img src="pictures/IMG_6050.JPG" height="200"> 
 
 ---------------------------------------------------------------------------------------------------------------
 Original description below
