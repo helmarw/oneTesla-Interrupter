@@ -1,6 +1,8 @@
 I modded the original Firwmware so you can make your own (cheap) Interrupter using an  Arduino UNO or Duemilanove plus two Shields.
 Here the parts you will need (see folder pictures and manuals for more information): 
 
+<img src="pictures/IMG_6044.JPG" height="120"> <img src="pictures/IMG_6045.JPG" height="120"> <img src="pictures/IMG_6046.JPG" height="120"> 
+
  * Arduino UNO or Duemilanove: https://store.arduino.cc/arduino-uno-rev3 or cheap remake https://www.az-delivery.de/products/uno-r3-board-mit-atmega328p-und-usb-kabel
  * Datalogger Shield: https://learn.adafruit.com/adafruit-data-logger-shield or cheap remake https://www.az-delivery.de/products/datenlogger-modul?_pos=1&_sid=d2708e960&_ss=r
  * LCD-Keypad Shield: https://wiki.dfrobot.com/LCD_KeyPad_Shield_For_Arduino_SKU__DFR0009 or cheap remake https://www.az-delivery.de/products/azdelivery-hd44780-1602-lcd-module-display-2x16-zeichen-fur-arduino-lcd1602-keypad
