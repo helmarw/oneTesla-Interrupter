@@ -46,7 +46,8 @@ unsigned char get_key()
 #else
  int adc_key_in = analogRead(0);
  if (adc_key_in > 1000) return btnNONE;
- if (adc_key_in < 50)   return btnRIGHT; 
+// if (adc_key_in < 50)   return btnRIGHT; 
+ if (adc_key_in < 50)   return btnRETURN;  //when in debug mode + LDC Shield right button is mapped to Return 
  if (adc_key_in < 195)  return btnUP;
  if (adc_key_in < 380)  return btnDOWN;
  if (adc_key_in < 555)  return btnLEFT;

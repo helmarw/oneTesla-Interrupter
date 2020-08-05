@@ -40,10 +40,12 @@ void setupTimers() {
 void setupPins() {
   // Setup optical transmitter output pin
   DDRD  |=  (1 << 2);  
-  
+
+#ifndef DEBUG  
   pinMode(BTN_UP, INPUT);
   pinMode(BTN_DN, INPUT);
   pinMode(BTN_OK, INPUT);
+#endif
 }
 
 byte readFreqPot() {

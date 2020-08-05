@@ -8,7 +8,7 @@
 
 #include "system.h"
 
-//#define DEBUG
+#define DEBUG
 
 /****Coil-dependent configuration variables: change these to match your coil****/
 
