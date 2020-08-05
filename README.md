@@ -1,14 +1,14 @@
 I modded the original Firwmware so you can make your own (cheap) Interrupter using an  Arduino UNO or Duemilanove plus two Shields.
 Here the parts you will need (see folder pictures and manuals for more information): 
 
-<img src="pictures/IMG_6044.JPG" height="240"> <img src="pictures/IMG_6045.JPG" height="240"> <img src="pictures/IMG_6046.JPG" height="240"> 
+<img src="pictures/IMG_6044.JPG" height="200"> <img src="pictures/IMG_6045.JPG" height="200"> <img src="pictures/IMG_6046.JPG" height="200"> 
 
  * Arduino UNO or Duemilanove: https://store.arduino.cc/arduino-uno-rev3 or cheap remake https://www.az-delivery.de/products/uno-r3-board-mit-atmega328p-und-usb-kabel
  * Datalogger Shield: https://learn.adafruit.com/adafruit-data-logger-shield or cheap remake https://www.az-delivery.de/products/datenlogger-modul?_pos=1&_sid=d2708e960&_ss=r
  * LCD-Keypad Shield: https://wiki.dfrobot.com/LCD_KeyPad_Shield_For_Arduino_SKU__DFR0009 or cheap remake https://www.az-delivery.de/products/azdelivery-hd44780-1602-lcd-module-display-2x16-zeichen-fur-arduino-lcd1602-keypad
  * Quality: you get what you pay for and READ THE FUCKING MANUAL :D
- * Attention: LCD Shield (at least the ones i used) you need to trimm Pin 10, usually used for Backlight control but is needed for the SD card (PIN 10 for Chip selelect). Backlight is now always on, but usually you need this anyway
- * To use it at all you need to enable Debug mode go to constants.h and uncomment the line 11 //#define DEBUG (original firmare would need some minor tweaks, but nothing serious)
+ * Attention: LCD Shield (at least the ones i used) you need to trimm Pin 10, usually used for Backlight control but is needed for the SD card (PIN 10 for Chip selelect). Backlight is now always on, but usually you need this anyway <img src="pictures/IMG_6047.JPG" height="200">
+  * To use it at all you need to enable Debug mode go to constants.h and uncomment the line 11 //#define DEBUG (original firmare would need some minor tweaks, but nothing serious)
  * Attention: in Debug mode the original oneTesla-SD-Interrupter wont work!!!
  * some other parts:
  * 1x LED FIB OPT 660NM SUPERBRITE RED IF-E97 https://www.digikey.de/product-detail/de/industrial-fiber-optics/IF-E97/FB129-ND/272338
@@ -20,7 +20,7 @@ Here the parts you will need (see folder pictures and manuals for more informati
  * 1x 100kOhm 1/4W
  * 1x 220Ohm 1/4W
  * 1x 3.3kOhm 1/4W
- * 1x TRS-MIDI Type A Adapter (check thats connected according to specs, DIN 4 = Ring, DIN 5 = Tip otherwise it wont work!!!) : https://www.thomann.de/de/teenage_engineering_midi_cable_kit.htm
+ * 1x TRS-MIDI Type A Adapter (check thats connected according to specs, DIN 4 = Ring, DIN 5 = Tip otherwise it wont work!!!):<img src="pictures/midi-din-vs-miniklinke.jpg" height="200"> https://www.thomann.de/de/teenage_engineering_midi_cable_kit.htm 
  * in total its something between 40$ and 60$ and maybe 1hr work (less if you already know what your are doing)
  * to use it you need to power it with a Battery pack or Notebook when not connected to mains, e.g. when using Live Mode
 
