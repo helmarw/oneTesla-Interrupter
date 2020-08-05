@@ -34,6 +34,9 @@ waiting for a few parts to finish up the Live Mode
 here some details how i wired the Optical Transmitter and the 100Ohm resistor<br>
 <img src="pictures/IMG_6049.JPG" height="200"> <img src="pictures/IMG_6050.JPG" height="200"> 
 
+how to wire the MIDI-IN circuit, instead of the DIN socket im using a Stereo Jack 3.5MM <br>
+<img src="pictures/LIVE_MODE_MIDI_IN.png" height="200"> <img src="pictures/midi-din-vs-miniklinke.jpg" height="200">
+
 ---------------------------------------------------------------------------------------------------------------
 Original description below
 ---------------------------------------------------------------------------------------------------------------
