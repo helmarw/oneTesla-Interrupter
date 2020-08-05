@@ -1,4 +1,4 @@
-I modded the original Firwmware so you can make your own (cheap) Interrupter using an  Arduino UNO or Duemilanove plus two Shields.
+I modded the original Firwmware so you can make your own Interrupter using an Arduino UNO or Duemilanove plus two Shields.
 Here the parts you will need (see folder pictures and manuals for more information): 
 
 <img src="pictures/IMG_6044.JPG" height="200"> <img src="pictures/IMG_6045.JPG" height="200"> <img src="pictures/IMG_6046.JPG" height="200"> 
