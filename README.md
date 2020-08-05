@@ -20,7 +20,7 @@ Here the parts you will need (see folder pictures and manuals for more informati
  * 1x 100kOhm 1/4W
  * 1x 220Ohm 1/4W
  * 1x 3.3kOhm 1/4W
- * 1x TRS-MIDI Type A Adapter (check thats connected according to specs, DIN 4 = Ring, DIN 5 = Tip otherwise it wont work!!!):<img src="pictures/midi-din-vs-miniklinke.jpg" height="200"><br> https://www.thomann.de/de/teenage_engineering_midi_cable_kit.htm 
+ * 1x TRS-MIDI Type A Adapter (check thats connected according to specs, DIN 4 = Ring, DIN 5 = Tip otherwise it wont work!!!):<br><img src="pictures/midi-din-vs-miniklinke.jpg" height="200"><br> https://www.thomann.de/de/teenage_engineering_midi_cable_kit.htm 
  * in total its something between 40$ and 60$ and maybe 1hr work (less if you already know what your are doing)
  * to use it you need to power it with a Battery pack or Notebook when not connected to mains, e.g. when using Live Mode
 
